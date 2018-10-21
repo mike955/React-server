@@ -1,0 +1,60 @@
+[
+    {
+        "key": "node",
+        "val": "Node",
+        "childrens": [
+            {
+                "key": "npm",
+                "val": "Npm",
+                "childrens": [
+                    {
+                        "key": "registry",
+                        "val": "配置私库"
+                    },
+                    {
+                        "key": "configRegistry",
+                        "val": "配置淘宝 npm 源"
+                    }
+                ]
+            }, {
+                "key": "test",
+                "val": "Test",
+                "childrens": [
+                    {
+                        "key": "supertest",
+                        "val": "supertest"
+                    },
+                    {
+                        "key": "mocha_chai",
+                        "val": "mocha + chai"
+                    }
+                ]
+            }
+        ]
+    },{
+        "key": "openresty",
+        "val": "Openresty",
+        "childrens": [
+            {
+                "key": "kong",
+                "val": "Kong",
+                "childrens": [
+                    {
+                        "key": "install",
+                        "val": "安装" 
+                    }
+                ]
+            },
+            {
+                "key": "lua",
+                "val": "Lua",
+                "childrens": [
+                    {
+                        "key": "getTime",
+                        "val": "获取系统时间" 
+                    }
+                ]
+            }
+        ]
+    }
+]
