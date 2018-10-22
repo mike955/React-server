@@ -42,7 +42,9 @@ app.use(bodyParser({
 app.use(serve(path.join(__dirname, '..', 'public')));
 
 // cors
-app.use(cors())
+app.use(cors({
+    origin: '*'
+}))
 
 //router
 app.use(async (koaCtx: Koa.Context, next: () => Promise<any>) => {
@@ -62,7 +64,7 @@ app.use(async (koaCtx: Koa.Context, next: () => Promise<any>) => {
 
 // 404
 app.use(async (ctx: Koa.Context, next: () => Promise<any>) => {
-    ctx.status = 404;
+    ctx.status = 200;
     ctx.body = 'Not Found';
 });
 

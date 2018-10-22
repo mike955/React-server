@@ -1,13 +1,11 @@
-[
-    {
+[{
         "key": "node",
         "val": "Node",
         "childrens": [
             {
                 "key": "npm",
                 "val": "Npm",
-                "childrens": [
-                    {
+                "childrens": [{
                         "key": "registry",
                         "val": "配置私库"
                     },
@@ -19,8 +17,7 @@
             }, {
                 "key": "test",
                 "val": "Test",
-                "childrens": [
-                    {
+                "childrens": [{
                         "key": "supertest",
                         "val": "supertest"
                     },
@@ -31,29 +28,25 @@
                 ]
             }
         ]
-    },{
+    },
+    {
         "key": "openresty",
         "val": "Openresty",
-        "childrens": [
-            {
+        "childrens": [{
                 "key": "kong",
                 "val": "Kong",
-                "childrens": [
-                    {
-                        "key": "install",
-                        "val": "安装" 
-                    }
-                ]
+                "childrens": [{
+                    "key": "install",
+                    "val": "安装"
+                }]
             },
             {
                 "key": "lua",
                 "val": "Lua",
-                "childrens": [
-                    {
-                        "key": "getTime",
-                        "val": "获取系统时间" 
-                    }
-                ]
+                "childrens": [{
+                    "key": "getTime",
+                    "val": "获取系统时间"
+                }]
             }
         ]
     }
