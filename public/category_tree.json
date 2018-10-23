@@ -3,26 +3,26 @@
         "val": "Node",
         "childrens": [
             {
-                "key": "npm",
+                "key": "node_npm",
                 "val": "Npm",
                 "childrens": [{
-                        "key": "registry",
+                        "key": "node_npm_registry",
                         "val": "配置私库"
                     },
                     {
-                        "key": "configRegistry",
+                        "key": "node_npm_configRegistry",
                         "val": "配置淘宝 npm 源"
                     }
                 ]
             }, {
-                "key": "test",
+                "key": "node_test",
                 "val": "Test",
                 "childrens": [{
-                        "key": "supertest",
+                        "key": "node_test_supertest",
                         "val": "supertest"
                     },
                     {
-                        "key": "mocha_chai",
+                        "key": "node_test_mocha-chai",
                         "val": "mocha + chai"
                     }
                 ]
@@ -33,18 +33,18 @@
         "key": "openresty",
         "val": "Openresty",
         "childrens": [{
-                "key": "kong",
+                "key": "openresty_kong",
                 "val": "Kong",
                 "childrens": [{
-                    "key": "install",
+                    "key": "openresty_kong_install",
                     "val": "安装"
                 }]
             },
             {
-                "key": "lua",
+                "key": "openresty_lua",
                 "val": "Lua",
                 "childrens": [{
-                    "key": "getTime",
+                    "key": "openresty_lua_getTime",
                     "val": "获取系统时间"
                 }]
             }

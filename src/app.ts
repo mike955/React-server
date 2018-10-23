@@ -63,9 +63,9 @@ app.use(async (koaCtx: Koa.Context, next: () => Promise<any>) => {
 })
 
 // 404
-app.use(async (ctx: Koa.Context, next: () => Promise<any>) => {
-    ctx.status = 200;
-    ctx.body = 'Not Found';
-});
+// app.use(async (ctx: Koa.Context, next: () => Promise<any>) => {
+//     ctx.status = 200;
+//     ctx.body = 'Not Found';
+// });
 
 export = app;

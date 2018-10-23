@@ -1,1 +1,1 @@
-## node-npm-registry
+## node_npm_registry

@@ -1,7 +1,5 @@
 import * as path from 'path';
 import * as logger from 'koa-morgan';
-import {promisify} from 'util';
-import * as fse from 'fs-extra';
 import * as fs from 'fs';
 
 export default class Route {
@@ -10,17 +8,16 @@ export default class Route {
         this.ctx = ctx;
     }
 
-    private  category() {
-
-    }
-
     async execute() {
         const category = this.ctx.category;
         const catalog = this.ctx.catalog;
         const content = this.ctx.content;
         if(category == 'get' && catalog == 'all' && content == 'catagory') {
             try {
-                return fse.readJsonSync('./public/category_tree.json');
+                let judge_exist = fs.existsSync('./public/category_tree.json');
+                if(judge_exist){
+                    return fs.readFileSync('./public/category_tree.json', 'utf8')
+                }
             } catch (error) {
                 console.log(error)
                 return {
@@ -31,10 +28,10 @@ export default class Route {
         }
         let file = `./category/${category}/${catalog}/${content}.md`;
         try {
-            fse.ensureDir(file);
-            // return fse.readJsonSync(file)
-            // return fs.readJsonSync(file);
-            return fs.readFileSync(file);
+            let judge_exist = fs.existsSync(file);
+            if(judge_exist){
+                return fs.readFileSync(file, 'utf8')
+            }
         } catch (error) {
             console.log(error)
             return {
